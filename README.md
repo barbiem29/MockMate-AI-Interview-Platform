@@ -1,93 +1,109 @@
 # MockMate AI – Interview Practice Platform
+
+## 🚀 GitHub Badges
+
 ![React](https://img.shields.io/badge/Frontend-React-blue)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
 ![Express](https://img.shields.io/badge/API-Express-black)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
 ![AI](https://img.shields.io/badge/AI-Powered-purple)
-
-MockMate AI is a full-stack web application designed to simulate real interview experiences. It helps users prepare for technical and behavioral interviews by generating questions dynamically, evaluating answers, and providing structured feedback.
-
-The idea behind this project was to make interview practice more realistic, adaptive, and useful compared to static question banks.
+![Status](https://img.shields.io/badge/Project-Active-success)
 
 ---
 
-## What this project does
+## 📌 About the Project
 
-* Generates interview questions using an AI-based system
-* Supports different interview types like technical, behavioral, and mixed
-* Parses resume data to personalize questions
-* Evaluates answers and generates feedback
-* Maintains a full interview flow from start to finish
-* Produces a final performance report after completion
+MockMate AI is a full-stack interview preparation platform designed to simulate real-world interview environments.
+
+The system helps users practice interviews in a structured way by generating dynamic questions, evaluating answers, and providing detailed feedback.
+
+Unlike static question banks, this project focuses on **adaptive interview flow** where questions change based on:
+
+* Interview type
+* Resume input
+* User responses
 
 ---
 
-## Interview Types Supported
+## 🎯 Key Features
+
+* 🔹 AI-powered dynamic question generation
+* 🔹 Multiple interview modes (Technical / Behavioral / Mixed / Resume-based)
+* 🔹 Resume parsing for personalized questions
+* 🔹 Step-by-step interview flow (10-question system)
+* 🔹 Real-time answer evaluation
+* 🔹 Final performance report generation
+* 🔹 Prevention of repetitive questions across sessions
+
+---
+
+## 🧠 Interview Types Supported
 
 * Technical Interview
 * Behavioral Interview
 * Mixed Interview
 * Resume-based Interview
-* Company-specific mode
+* Company-specific simulation
 
 ---
 
-## Tech Stack
+## 🏗️ Tech Stack
 
-**Frontend**
+### Frontend
 
 * React (Vite)
 * Tailwind CSS
 * Axios
 
-**Backend**
+### Backend
 
 * Node.js
 * Express.js
 * MongoDB (Mongoose)
 
-**Core Logic**
+### Core Modules
 
-* AI question generation system
-* Resume parsing module
-* Scoring and evaluation engine
-
----
-
-## How it works (simple flow)
-
-1. User starts an interview
-2. System generates a set of questions based on selected mode
-3. User answers each question one by one
-4. Responses are evaluated in real time
-5. After completion, a final report is generated
+* AI Question Generator
+* Resume Parsing Engine
+* Scoring & Evaluation System
 
 ---
 
-## Project Structure
+## ⚙️ System Workflow
 
-```
+1. User starts an interview session
+2. System selects interview type
+3. Questions are generated dynamically
+4. User answers each question one by one
+5. Responses are evaluated in real-time
+6. Final report is generated after completing all questions
+
+---
+
+## 📁 Project Structure
+
+```bash
 mockmate-ai/
 ├── backend/
 ├── frontend/
-└── README.md
+├── README.md
 ```
 
 ---
 
-## Running locally
+## 💻 Running the Project Locally
 
-Backend:
+### Backend Setup
 
-```
+```bash
 cd backend
 npm install
 npm run dev
 ```
 
-Frontend:
+### Frontend Setup
 
-```
+```bash
 cd frontend
 npm install
 npm run dev
@@ -95,13 +111,27 @@ npm run dev
 
 ---
 
-## A note on this project
+## 📈 Future Improvements
 
-This project is still evolving. The goal is to improve realism in interviews, reduce repetitive patterns in questions, and make the evaluation system more accurate over time.
+* Real-time proctoring system
+* Better AI evaluation accuracy
+* Advanced analytics dashboard
+* Voice-based interview mode enhancements
+* Multi-company interview packs
 
 ---
 
-## Built by
+## ⚠️ Note
+
+This project is actively evolving. The main focus areas currently are:
+
+* Improving resume parsing accuracy
+* Fixing question repetition issues
+* Stabilizing interview flow and report generation
+
+---
+
+## 👨‍💻 Built By
 
 Barbie Mathur
 Aryaman Chaudhary
