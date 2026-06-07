@@ -1,6 +1,6 @@
 # MockMate AI – Interview Practice Platform
 
-## 🚀 GitHub Badges
+##  GitHub Badges
 
 ![React](https://img.shields.io/badge/Frontend-React-blue)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 About the Project
+##  About the Project
 
 MockMate AI is a full-stack interview preparation platform designed to simulate real-world interview environments.
 
@@ -37,7 +37,7 @@ Unlike static question banks, this project focuses on **adaptive interview flow*
 
 ---
 
-## 🧠 Interview Types Supported
+##  Interview Types Supported
 
 * Technical Interview
 * Behavioral Interview
@@ -47,7 +47,7 @@ Unlike static question banks, this project focuses on **adaptive interview flow*
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -80,7 +80,7 @@ Unlike static question banks, this project focuses on **adaptive interview flow*
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 mockmate-ai/
@@ -91,7 +91,7 @@ mockmate-ai/
 
 ---
 
-## 💻 Running the Project Locally
+##  Running the Project Locally
 
 ### Backend Setup
 
@@ -109,15 +109,7 @@ npm install
 npm run dev
 ```
 
----
 
-## 📈 Future Improvements
-
-* Real-time proctoring system
-* Better AI evaluation accuracy
-* Advanced analytics dashboard
-* Voice-based interview mode enhancements
-* Multi-company interview packs
 
 ---
 
