@@ -125,5 +125,5 @@ This project is actively evolving. The main focus areas currently are:
 
 ## 👨‍💻 Built By
 
-Barbie Mathur
+Barbie Mathur &
 Aryaman Chaudhary
