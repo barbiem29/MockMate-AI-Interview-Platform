@@ -1,19 +1,17 @@
 # MockMate AI – Interview Practice Platform
-
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
-![Express](https://img.shields.io/badge/API-Express-black)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
-![AI](https://img.shields.io/badge/AI-Powered-purple)
-![Status](https://img.shields.io/badge/Project-Active-success)
-
-
 # Overview
 MockMate AI is a full-stack AI-powered mock interview platform that simulates real technical interview workflows using structured question delivery and automated evaluation.
 
 It processes user responses through a **Groq LLM integration** to generate technical score, communication score, and detailed feedback including strengths, weaknesses, and improvement suggestions. All sessions and results are stored in MongoDB for performance tracking.
 
 The system uses **JWT authentication**, **bcrypt password hashing**, and **protected REST APIs built with Node.js**, **Express.js** and **MongoDB**, with a **React.js** frontend for the user interface.
+
+![React](https://img.shields.io/badge/Frontend-React-ff8c00)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-ff6b6b)
+![Express](https://img.shields.io/badge/API-Express-f4c430)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-f39c12)
+![AI](https://img.shields.io/badge/AI-Powered-e84393)
+![Status](https://img.shields.io/badge/Project-Active-f1c40f)
 
 ### API Documentation:
 - [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
