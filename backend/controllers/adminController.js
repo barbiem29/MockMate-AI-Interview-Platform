@@ -2,7 +2,7 @@ const asyncHandler = require("express-async-handler");
 const User = require("../models/User");
 const Interview = require("../models/Interview");
 const Result = require("../models/Result");
-const ProctorLog = require("../models/ProctorLog");
+const ProctorLog = require("../models/Proctorlog");
 
 const getAdminDashboard = asyncHandler(async (req, res) => {
   const totalUsers = await User.countDocuments();

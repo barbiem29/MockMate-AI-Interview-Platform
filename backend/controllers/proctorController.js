@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const ProctorLog = require("../models/ProctorLog");
+const ProctorLog = require("../models/Proctorlog");
 const Interview = require("../models/Interview");
 
 // 🧠 SMART SCORING FUNCTION
