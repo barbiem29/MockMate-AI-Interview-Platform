@@ -236,3 +236,5 @@ Users can access:
 * Previous Interview History
 
 
+### Authors
+Barbie Mathur & Aryaman Chaudhary
