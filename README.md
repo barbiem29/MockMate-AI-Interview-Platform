@@ -9,10 +9,11 @@
 
 
 # Overview
-Preparing for technical interviews without a mentor is difficult. Most candidates either memorize answers or solve coding questions without receiving meaningful feedback on their communication, technical understanding, or interview performance.
+MockMate AI is a full-stack AI-powered mock interview platform built to simulate real technical interview workflows. It enables structured interview sessions where users attempt technical questions, submit responses, and receive automated evaluation using a large language model (LLM) integrated via the Groq API.
 
-MockMate AI provides a realistic interview environment where candidates answer technical questions, receive AI-generated evaluations, review their performance history, and identify areas requiring improvement.
-The platform also includes interview monitoring mechanisms to discourage dishonest behaviour during assessments.
+The system follows a controlled workflow consisting of question delivery, answer submission, AI-based evaluation, and generation of structured feedback including technical score, communication score, strengths, weaknesses, and improvement suggestions. All interview sessions and results are stored in MongoDB for historical performance tracking.
+
+The platform uses JWT authentication, bcrypt password hashing, and protected REST APIs with middleware-based route security. It is built using the MERN stack (React.js, Node.js, Express.js, MongoDB) with Axios for API communication, and integrates Groq LLM API for automated answer evaluation and feedback generation.
 
 #  Features
 ##  User Authentication
