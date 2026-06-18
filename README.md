@@ -15,6 +15,11 @@ It processes user responses through a **Groq LLM integration** to generate techn
 
 The system uses **JWT authentication**, **bcrypt password hashing**, and **protected REST APIs built with Node.js**, **Express.js** and **MongoDB**, with a **React.js** frontend for the user interface.
 
+### API Documentation:
+- [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
+### Architecture Documentation:
+- [System Architecture](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/ARCHITECTURE.md)
+
 #  Features
 ##  User Authentication
 * User Registration
@@ -119,71 +124,45 @@ GROQ_API_KEY=your_groq_api_key
 > **Important:** Never commit your `.env` file or expose sensitive credentials. Add `.env` to your `.gitignore`.
 
 ---
-### API Documentation:
-- [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
-### Architecture Documentation:
-- [System Architecture](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/ARCHITECTURE.md)
-- 
+
 # Installation & setup
-
 ## 1. Clone Repository
-
 ```bash
 git clone https://github.com/yourusername/mockmate-ai.git
 
 cd mockmate-ai
 ```
-
-
-
 ## 2. Backend Setup
-
 ```bash
 cd backend
 
 npm install
 ```
-
 Create a `.env` file and configure all required environment variables.
-
 Start the backend server:
-
 ```bash
 npm run dev
 ```
-
-Backend runs on:
-
+Bakend runs on:
 ```
 http://localhost:5000
 ```
-
 ---
-
 ## 3. Frontend Setup
-
 Open a new terminal.
-
 ```bash
 cd frontend
-
 npm install
 ```
-
 Start the React application:
-
 ```bash
 npm start
 ```
-
 Frontend runs on:
-
 ```
 http://localhost:3000
 ```
-
 ---
-
 # Application Testing
 ### Step 1 — Register
 * Open the application.
