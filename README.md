@@ -1,6 +1,8 @@
 <h1 align="center">MockMate AI – Automated Interview Practice</h1>
-
 <p align="center">
+  
+  ## Live Demo Link
+[MockMate AI – AI-Powered Mock Interview Platform](https://mockmate-ai-interview-platform-ifdk.onrender.com)
 <p align="center">
   
 ##  Overview
