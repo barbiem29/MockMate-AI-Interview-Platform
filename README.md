@@ -7,16 +7,13 @@
 ![AI](https://img.shields.io/badge/AI-Powered-purple)
 ![Status](https://img.shields.io/badge/Project-Active-success)
 
----
+
 # Overview
 Preparing for technical interviews without a mentor is difficult. Most candidates either memorize answers or solve coding questions without receiving meaningful feedback on their communication, technical understanding, or interview performance.
 
 MockMate AI provides a realistic interview environment where candidates answer technical questions, receive AI-generated evaluations, review their performance history, and identify areas requiring improvement.
 The platform also includes interview monitoring mechanisms to discourage dishonest behaviour during assessments.
 
----
-
----
 #  Features
 ##  User Authentication
 * User Registration
@@ -34,7 +31,6 @@ The platform also includes interview monitoring mechanisms to discourage dishone
 * AI Answer Evaluation
 * Automatic Score Generation
 
----
 
 ## Performance Dashboard
 Users can view:
@@ -44,7 +40,6 @@ Users can view:
 * Interview History
 * Detailed Feedback Reports
 
----
 
 ## AI Evaluation
 Candidate responses are evaluated using an LLM.
@@ -254,28 +249,4 @@ Users can access:
 * Suggestions
 * Previous Interview History
 
----
-
-# 📚 Concepts Demonstrated
-
-* MERN Stack Development
-* REST API Design
-* JWT Authentication
-* Password Hashing
-* MongoDB Schema Design
-* CRUD Operations
-* Prompt Engineering
-* Large Language Model Integration
-* AI Response Parsing
-* MVC Architecture
-* Middleware
-* Error Handling
-* Environment Variables
-* State Management
-* Client–Server Communication
-* Session Management
-* Proctoring Logic
-
-
----
 
