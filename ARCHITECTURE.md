@@ -1,52 +1,39 @@
 # MockMate AI Architecture Document:
 ## 1. System Architecture
-
 The system follows a client-server architecture with an additional AI service integration layer.
-
 Frontend communicates with the backend through REST APIs. The backend handles authentication, interview logic, database operations, and AI communication. MongoDB is used for persistence, while Groq API is used for LLM-based evaluation.
-
 Frontend → Backend → Database + AI Service
-
 Frontend (React)
-
 * User interface
 * Interview flow
 * Dashboard and results
 
 Backend (Node.js + Express)
-
 * API handling
 * Authentication
 * Interview orchestration
 * AI integration layer
 
 Database (MongoDB)
-
 * Stores users, interviews, results, and proctor logs
 
 External Service
-
 * Groq API for LLM evaluation and feedback generation
 
 ---
 
 ## 2. Database Design
-
 MongoDB is used as a document-based database. The system is organized into four primary collections.
 
 ### User Collection
-
 Stores user credentials and references to activity.
-
 Fields:
-
 * name
 * email
 * password (hashed)
 * createdAt
 
 Relations:
-
 * One user can have multiple interviews
 * One user can have multiple results
 * One user can have multiple proctor logs
@@ -54,11 +41,8 @@ Relations:
 ---
 
 ### Interview Collection
-
 Stores active and completed interview sessions.
-
 Fields:
-
 * userId
 * questions array
 * answers array
@@ -69,11 +53,8 @@ Fields:
 ---
 
 ### Result Collection
-
 Stores final evaluation output of an interview session.
-
 Fields:
-
 * userId
 * interviewId
 * technicalScore
@@ -86,11 +67,8 @@ Fields:
 ---
 
 ### ProctorLog Collection
-
 Stores integrity monitoring events during interviews.
-
 Fields:
-
 * userId
 * interviewId
 * eventType (tab switch, window blur, violation)
@@ -99,11 +77,8 @@ Fields:
 ---
 
 ## 3. Authentication Workflow
-
 Authentication is implemented using JWT and bcrypt hashing.
-
 Flow:
-
 User registration
 → Password hashing using bcrypt
 → Store user in database
@@ -123,11 +98,8 @@ Security considerations:
 ---
 
 ## 4. AI Evaluation Workflow
-
 The AI evaluation system is the core intelligence layer of the application.
-
 Flow:
-
 Question is presented to user
 → User submits response
 → Backend constructs structured prompt
@@ -150,18 +122,14 @@ Prompt structure is strictly defined to ensure consistent output format from the
 ---
 
 ## 5. Proctoring Workflow
-
 The proctoring system monitors user behaviour during interviews to detect suspicious activity.
-
 Events monitored:
-
 * Tab switching
 * Window losing focus
 * Repeated violations
 * Irregular activity patterns
 
 Flow:
-
 Interview starts
 → Event listeners activated in frontend
 → Suspicious activity detected
@@ -175,7 +143,6 @@ This module ensures interview integrity and simulates real assessment environmen
 ---
 
 ## 6. End-to-End Interview Workflow
-
 User logs in
 → Dashboard loads
 → Interview is selected
@@ -193,11 +160,8 @@ User logs in
 ---
 
 ## 7. Backend Architecture (Internal Design)
-
 The backend follows a modular MVC-style structure.
-
 Request Flow:
-
 Routes
 → Controllers
 → Services
@@ -205,7 +169,6 @@ Routes
 → Database
 
 Responsibilities:
-
 Routes:
 Define API endpoints
 
@@ -224,35 +187,23 @@ Handles authentication, validation, and error control
 ---
 
 ## 8. External Integrations
-
 ### Groq API
-
 Used for large language model inference.
-
 Responsibilities:
-
 * Evaluate user responses
 * Generate structured feedback
 * Return scoring in JSON format
 
 ---
-
 ### JWT Authentication
-
 Used for secure session management.
-
 Features:
-
 * Stateless authentication
 * Token-based access control
 * Route protection via middleware
-
 ---
-
 ## 9. Design Principles
-
 The system is built with the following principles:
-
 * Separation of concerns
 * Modular backend structure
 * Stateless authentication
@@ -261,8 +212,3 @@ The system is built with the following principles:
 * Clear API boundaries
 * Extensibility for future features
 
----
-
-## Summary
-
-MockMate AI is a structured full-stack system combining interview simulation, AI-based evaluation, authentication, and behavioural monitoring. The architecture is designed to be scalable, maintainable, and extendable for production-level assessment systems.
