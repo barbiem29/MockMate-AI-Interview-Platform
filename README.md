@@ -1,26 +1,31 @@
-# MockMate AI – Interview Practice Platform
-# Overview
+<h1 align="center">MockMate AI – Automated Interview Practice & Evaluation Syst</h1>
+
+<p align="center">
+AI-powered mock interview system that simulates real technical interview workflows with automated evaluation and feedback.
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Frontend-React-0d6efd?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Backend-Node.js-198754?style=for-the-badge" />
+<img src="https://img.shields.io/badge/API-Express-343a40?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Database-MongoDB-20c997?style=for-the-badge" />
+<img src="https://img.shields.io/badge/AI-Groq%20LLM-6f42c1?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Auth-JWT%20%26%20Bcrypt-ffc107?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Active-198754?style=for-the-badge" />
+
+</p>
+
+---
+
+##  Overview
+
 MockMate AI is a full-stack AI-powered mock interview platform that simulates real technical interview workflows using structured question delivery and automated evaluation.
 
 It processes user responses through a **Groq LLM integration** to generate technical score, communication score, and detailed feedback including strengths, weaknesses, and improvement suggestions. All sessions and results are stored in MongoDB for performance tracking.
 
-The system uses **JWT authentication**, **bcrypt password hashing**, and **protected REST APIs built with Node.js**, **Express.js** and **MongoDB**, with a **React.js** frontend for the user interface.
+The system uses **JWT authentication**, **bcrypt password hashing**, and **secure REST APIs built with Node.js, Express.js, and MongoDB**, with a **React.js frontend for the user interface**.
 
-<h1 align="center">🚀 InterviewForge AI</h1>
-
-<p align="center">
-AI-powered interview preparation platform for mock interviews, feedback, and skill improvement.
-</p>
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/React-ff8c00?style=flat-square" />
-<img src="https://img.shields.io/badge/Node.js-ff4f81?style=flat-square" />
-<img src="https://img.shields.io/badge/Express-ffd700?style=flat-square" />
-<img src="https://img.shields.io/badge/MongoDB-ff6b6b?style=flat-square" />
-<img src="https://img.shields.io/badge/AI-e84393?style=flat-square" />
-
-</p>
 ### API Documentation:
 - [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
 ### Architecture Documentation:
