@@ -1,4 +1,4 @@
-#  MockMate AI – REST API Documentation
+# REST API Documentation
 
 ## Overview
 
