@@ -17,13 +17,7 @@ The system uses **JWT authentication**, **bcrypt password hashing**, and **secur
 
 ---
 
-
-### API Documentation:
-- [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
-### Architecture Documentation:
-- [System Architecture](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/ARCHITECTURE.md)
-
-#  Features
+#  Features Of MockMate AI:
 ##  User Authentication
 * User Registration
 * Secure Login
@@ -127,7 +121,12 @@ GROQ_API_KEY=your_groq_api_key
 > **Important:** Never commit your `.env` file or expose sensitive credentials. Add `.env` to your `.gitignore`.
 
 ---
+### API Documentation:
+- [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
+### Architecture Documentation:
+- [System Architecture](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/ARCHITECTURE.md)
 
+- 
 # Installation & setup
 ## 1. Clone Repository
 ```bash
