@@ -4,7 +4,7 @@ export function Button({ children, variant = 'primary', size = 'md', loading, cl
   const base = 'inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none'
 
   const variants = {
-    primary:   'bg-emerald text-bg hover:bg-emerald-hover active:scale-95',
+    primary: 'bg-emerald text-bg hover:bg-[#6FFFCF] active:scale-95 btn-glow font-display font-bold',
     secondary: 'glass border border-emerald/20 text-[#F3F4F6] hover:border-emerald/40 hover:bg-emerald/5 active:scale-95',
     ghost:     'text-[#94A3B8] hover:text-[#F3F4F6] hover:bg-white/5 active:scale-95',
     danger:    'bg-danger/10 border border-danger/30 text-danger hover:bg-danger/20 active:scale-95',
