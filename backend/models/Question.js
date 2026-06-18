@@ -10,13 +10,13 @@ const questionSchema = new mongoose.Schema(
 
     questionType: {
       type: String,
-      enum: ["technical", "behavioral", "mcq", "resume-based", "follow-up"],
+      enum: ["technical", "behavioral", "mcq", "follow-up"],
       required: [true, "Question type is required"]
     },
 
     category: {
       type: String,
-      enum: ["DSA", "DBMS", "OS", "CN", "OOPS", "HR", "Aptitude", "Resume", "General"],
+      enum: ["DSA", "DBMS", "OS", "CN", "OOPS", "HR", "Aptitude", "General"],
       default: "General"
     },
 
@@ -63,7 +63,7 @@ const questionSchema = new mongoose.Schema(
 
     sourceType: {
       type: String,
-      enum: ["manual", "ai", "resume", "company-bank"],
+      enum: ["manual", "ai", "company-bank"],
       default: "manual"
     },
 

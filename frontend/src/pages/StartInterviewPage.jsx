@@ -1,12 +1,11 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   Play, Zap, Code, Brain, Building2, Shield,
-  Eye, Mic, FileText, ArrowRight, Upload, X, CheckCircle
+  Eye, Mic, ArrowRight
 } from 'lucide-react'
 import { interviewAPI } from '../services/api'
-import api from '../services/api'
 import { useAuth } from '../context/AuthContext'
 import { Button, Card, GlowOrbs, Spinner } from '../components/ui/index.jsx'
 import toast from 'react-hot-toast'
@@ -15,7 +14,6 @@ const INTERVIEW_TYPES = [
   { id: 'technical',    label: 'Technical',    icon: Code,     desc: 'Coding & architecture' },
   { id: 'behavioral',   label: 'Behavioral',   icon: Brain,    desc: 'Soft skills & culture fit' },
   { id: 'mixed',        label: 'Mixed',        icon: Zap,      desc: 'Balanced session', recommended: true },
-  { id: 'resume-based', label: 'Resume Based', icon: FileText, desc: 'Based on your resume' },
 ]
 const COMPANY_MODES = ['general','google','amazon','microsoft','tcs','infosys','wipro']
 const LEVELS        = ['beginner','intermediate','advanced']
@@ -35,13 +33,7 @@ function SectionHeader({ icon: Icon, label }) {
 export default function StartInterviewPage() {
   const { user } = useAuth()
   const navigate  = useNavigate()
-  const fileRef   = useRef(null)
-
-  const [loading,       setLoading]       = useState(false)
-  const [resumeFile,    setResumeFile]     = useState(null)
-  const [resumeParsing, setResumeParsing]  = useState(false)
-  const [resumeText,    setResumeText]     = useState('')
-  const [resumeSkills,  setResumeSkills]   = useState([])
+  const [loading, setLoading] = useState(false)
 
   const [config, setConfig] = useState({
     interviewTitle:      '',
@@ -64,48 +56,6 @@ export default function StartInterviewPage() {
     }))
   }
 
-  async function handleResumeUpload(e) {
-    const file = e.target.files[0]
-    if (!file) return
-    if (file.type !== 'application/pdf') { toast.error('Only PDF files supported'); return }
-
-    setResumeFile(file)
-    setResumeParsing(true)
-
-    try {
-      const formData = new FormData()
-      formData.append('resume', file)
-
-      const res = await api.post('/resume/parse', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      })
-
-      const { rawText, extractedSkills } = res.data.data
-      setResumeText(rawText)
-      setResumeSkills(extractedSkills)
-
-      // Auto-add extracted skills
-      setConfig(c => ({
-        ...c,
-        skillsTargeted: [...new Set([...c.skillsTargeted, ...extractedSkills])],
-        interviewType: 'resume-based'
-      }))
-
-      toast.success(`Resume parsed! Found ${extractedSkills.length} skills.`)
-    } catch (err) {
-      toast.error('Failed to parse resume')
-      console.error(err)
-    } finally {
-      setResumeParsing(false)
-    }
-  }
-
-  function removeResume() {
-    setResumeFile(null)
-    setResumeText('')
-    setResumeSkills([])
-    if (fileRef.current) fileRef.current.value = ''
-  }
 
   async function handleStart() {
   setLoading(true)
@@ -114,8 +64,6 @@ export default function StartInterviewPage() {
       ...config,
       interviewTitle: config.interviewTitle ||
         `${config.interviewType} Interview — ${new Date().toLocaleDateString()}`,
-      resumeUsed:  !!resumeFile,
-      resumeText:  resumeText,
     }
     const res = await interviewAPI.start(payload)
     const { interview, firstQuestion } = res.data.data
@@ -163,53 +111,6 @@ export default function StartInterviewPage() {
           </div>
         </Card>
 
-        {/* Resume Upload — shows when resume-based selected */}
-        {config.interviewType === 'resume-based' && (
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-            <Card className="p-6">
-              <SectionHeader icon={FileText} label="Upload Resume (PDF)" />
-              {!resumeFile ? (
-                <div
-                  onClick={() => fileRef.current?.click()}
-                  className="border-2 border-dashed border-emerald/20 rounded-xl p-8 text-center cursor-pointer hover:border-emerald/40 hover:bg-emerald/3 transition-all"
-                >
-                  <Upload className="w-8 h-8 text-emerald/50 mx-auto mb-3" />
-                  <p className="text-sm text-[#94A3B8]">Click to upload your resume PDF</p>
-                  <p className="text-xs text-[#4B5563] mt-1">Max 5MB · PDF only</p>
-                  <input
-                    ref={fileRef}
-                    type="file"
-                    accept=".pdf"
-                    onChange={handleResumeUpload}
-                    className="hidden"
-                  />
-                </div>
-              ) : (
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-emerald/5 border border-emerald/20">
-                  {resumeParsing ? (
-                    <Spinner size="sm" />
-                  ) : (
-                    <CheckCircle className="w-5 h-5 text-emerald flex-shrink-0" />
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-[#F3F4F6] truncate">{resumeFile.name}</p>
-                    {resumeSkills.length > 0 && (
-                      <p className="text-xs text-emerald mt-0.5">
-                        Skills found: {resumeSkills.join(', ')}
-                      </p>
-                    )}
-                    {resumeParsing && (
-                      <p className="text-xs text-[#94A3B8] mt-0.5">Parsing resume...</p>
-                    )}
-                  </div>
-                  <button onClick={removeResume} className="text-[#94A3B8] hover:text-danger transition-colors">
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
-              )}
-            </Card>
-          </motion.div>
-        )}
 
         {/* Company Mode */}
         <Card className="p-6">
@@ -288,18 +189,6 @@ export default function StartInterviewPage() {
               </button>
             ))}
           </div>
-          {resumeSkills.length > 0 && (
-            <div className="mt-3 pt-3 border-t border-border">
-              <p className="text-xs text-emerald mb-2">From your resume:</p>
-              <div className="flex flex-wrap gap-2">
-                {resumeSkills.map(skill => (
-                  <span key={skill} className="px-2.5 py-1 rounded-lg text-xs bg-emerald/10 border border-emerald/25 text-emerald">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
         </Card>
 
         {/* Options */}
@@ -340,10 +229,7 @@ export default function StartInterviewPage() {
           <div>
             <p className="font-display font-bold text-[#F3F4F6]">Ready to begin?</p>
             <p className="text-sm text-[#94A3B8]">
-              {config.interviewType === 'resume-based' && !resumeFile
-                ? '⚠ Upload resume for best results'
-                : 'AI evaluator is standing by'
-              }
+              AI evaluator is standing by
             </p>
           </div>
           <Button onClick={handleStart} loading={loading} size="lg">

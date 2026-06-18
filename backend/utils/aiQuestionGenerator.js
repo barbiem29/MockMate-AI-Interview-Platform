@@ -36,9 +36,7 @@ const getAdaptiveQuestion = async ({
   };
 
   if (interviewType !== "mixed") {
-    if (interviewType === "resume-based") {
-      filter.questionType = { $in: ["resume-based", "technical", "follow-up"] };
-    } else if (interviewType === "voice-based") {
+    if (interviewType === "voice-based") {
       filter.questionType = { $in: ["behavioral", "technical"] };
     } else if (interviewType === "company-specific") {
       filter.questionType = { $in: ["technical", "behavioral", "mcq"] };

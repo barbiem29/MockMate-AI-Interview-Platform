@@ -81,7 +81,6 @@ const generateQuestionWithLLM = async ({
   targetRole        = "",
   skillsTargeted    = [],
   previousQuestions = [],
-  resumeText        = "",
   preferMCQ         = true,
   sessionSeed       = ""
 }) => {
@@ -97,8 +96,6 @@ const generateQuestionWithLLM = async ({
 
     if (interviewType === "behavioral") {
       questionType = "behavioral";
-    } else if (interviewType === "resume-based") {
-      questionType = r < 0.6 ? "mcq" : "technical";
     } else if (interviewType === "technical") {
       questionType = r < 0.7 ? "mcq" : "technical";
     } else {
@@ -115,7 +112,7 @@ const generateQuestionWithLLM = async ({
       targetRole        ? `Target role: ${targetRole}.`           : "",
       skillsTargeted?.length ? `Focus on: ${skillsTargeted.join(", ")}.` : "",
       companyMode !== "general" ? `${companyMode} interview style.` : "",
-      resumeText        ? `From candidate resume: ${resumeText.slice(0, 300)}` : "",
+      // resume context removed
     ].filter(Boolean).join(" ");
 
     // Last 5 questions to avoid repeats
@@ -163,7 +160,7 @@ ${isMCQ
 
 STRICT RULES:
 - Return ONLY raw JSON — no \`\`\` fences, no preamble, no explanation
-- category must be exactly one of: DSA, DBMS, OS, CN, OOPS, HR, Aptitude, Resume, General
+- category must be exactly one of: DSA, DBMS, OS, CN, OOPS, HR, Aptitude, General
 - difficulty must be exactly: easy, medium, or hard
 - MCQ must have exactly 4 options
 - Make the question DIFFERENT from previous questions`;
@@ -196,9 +193,9 @@ STRICT RULES:
 
     const parsed = JSON.parse(extractJson(rawText));
 
-    const validTypes      = ["technical", "behavioral", "mcq", "resume-based", "follow-up"];
+    const validTypes      = ["technical", "behavioral", "mcq", "follow-up"];
     const validDiffs      = ["easy", "medium", "hard"];
-    const validCats       = ["DSA", "DBMS", "OS", "CN", "OOPS", "HR", "Aptitude", "Resume", "General"];
+    const validCats       = ["DSA", "DBMS", "OS", "CN", "OOPS", "HR", "Aptitude", "General"];
 
     const options = isMCQ && Array.isArray(parsed.options) && parsed.options.length === 4
       ? parsed.options

@@ -15,7 +15,7 @@ const answerSchema = new mongoose.Schema(
 
     questionType: {
       type: String,
-      enum: ["technical", "behavioral", "mcq", "resume-based", "follow-up"],
+      enum: ["technical", "behavioral", "mcq", "follow-up"],
       required: true
     },
 
@@ -170,7 +170,7 @@ const interviewSchema = new mongoose.Schema(
 
     interviewType: {
       type: String,
-      enum: ["technical", "behavioral", "mixed", "resume-based", "company-specific", "voice-based"],
+      enum: ["technical", "behavioral", "mixed", "company-specific", "voice-based"],
       default: "mixed"
     },
 
@@ -229,17 +229,7 @@ const interviewSchema = new mongoose.Schema(
       default: true
     },
 
-    resumeUsed: {
-      type: Boolean,
-      default: false
-    },
 
-    resumeFileUrl: {
-      type: String,
-      default: ""
-    },
-
-    
 
     startTime: {
       type: Date,
@@ -287,20 +277,15 @@ const interviewSchema = new mongoose.Schema(
       default: "Borderline"
     },
 
-    aiSummary:{
-  type: String,
-  default: ""
-},
+    aiSummary: {
+      type: String,
+      default: ""
+    },
 
-resumeText: {
-  type: String,
-  default: ""
-},
-
-sessionSeed: {
-  type: String,
-  default: ""
-}
+    sessionSeed: {
+      type: String,
+      default: ""
+    }
   },
   {
     timestamps: true

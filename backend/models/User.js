@@ -46,10 +46,6 @@ const userSchema = new mongoose.Schema(
       type: [String],
       default: []
     },
-    resumeUrl: {
-      type: String,
-      default: ""
-    },
     streakCount: {
       type: Number,
       default: 0
