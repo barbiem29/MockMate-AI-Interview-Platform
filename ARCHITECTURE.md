@@ -1,4 +1,4 @@
-# MockMate AI — Architecture Document
+# MockMate AI Architecture Document:
 ## 1. System Architecture
 
 The system follows a client-server architecture with an additional AI service integration layer.
