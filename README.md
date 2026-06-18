@@ -6,12 +6,21 @@ It processes user responses through a **Groq LLM integration** to generate techn
 
 The system uses **JWT authentication**, **bcrypt password hashing**, and **protected REST APIs built with Node.js**, **Express.js** and **MongoDB**, with a **React.js** frontend for the user interface.
 
-!![React](https://img.shields.io/badge/Frontend-React-ff7a00)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-ff4f81)
-![Express](https://img.shields.io/badge/API-Express-ffd700)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-ff8c42)
-![AI](https://img.shields.io/badge/AI-Powered-fc3c8f)
-![Status](https://img.shields.io/badge/Project-Active-f7c948)
+<h1 align="center">🚀 InterviewForge AI</h1>
+
+<p align="center">
+AI-powered interview preparation platform for mock interviews, feedback, and skill improvement.
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/React-ff8c00?style=flat-square" />
+<img src="https://img.shields.io/badge/Node.js-ff4f81?style=flat-square" />
+<img src="https://img.shields.io/badge/Express-ffd700?style=flat-square" />
+<img src="https://img.shields.io/badge/MongoDB-ff6b6b?style=flat-square" />
+<img src="https://img.shields.io/badge/AI-e84393?style=flat-square" />
+
+</p>
 ### API Documentation:
 - [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
 ### Architecture Documentation:
