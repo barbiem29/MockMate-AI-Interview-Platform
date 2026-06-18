@@ -119,7 +119,11 @@ GROQ_API_KEY=your_groq_api_key
 > **Important:** Never commit your `.env` file or expose sensitive credentials. Add `.env` to your `.gitignore`.
 
 ---
-
+### API Documentation:
+- [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
+### Architecture Documentation:
+- [System Architecture](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/ARCHITECTURE.md)
+- 
 # Installation & setup
 
 ## 1. Clone Repository
