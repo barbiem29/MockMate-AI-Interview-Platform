@@ -22,7 +22,6 @@ The platform also includes interview monitoring mechanisms to discourage dishone
 * JWT Authentication
 * Protected Routes
 
----
 
 ## AI Mock Interviews
 * Technical Interview Questions
@@ -69,9 +68,6 @@ MockMate AI monitors interview integrity by detecting:
 * Multiple Violations
 * Suspicious Behaviour
 Every event is stored for later review.
-
----
-
 # Tech Stack
 ## Frontend
 * React.js
@@ -79,8 +75,7 @@ Every event is stored for later review.
 * Axios
 * Context API
 * CSS / Tailwind CSS
----
-
+  
 ## Backend
 * Node.js
 * Express.js
@@ -88,7 +83,7 @@ Every event is stored for later review.
 * JWT Authentication
 * bcrypt
 * Groq API Integration
----
+
 
 ## Database
 MongoDB
@@ -99,7 +94,6 @@ Collections:
 * Results
 * ProctorLogs
 
----
 
 # Environment Variables
 
@@ -135,7 +129,7 @@ git clone https://github.com/yourusername/mockmate-ai.git
 cd mockmate-ai
 ```
 
----
+
 
 ## 2. Backend Setup
 
