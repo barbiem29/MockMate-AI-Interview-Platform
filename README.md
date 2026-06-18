@@ -1,6 +1,6 @@
 <h1 align="center">MockMate AI – Automated Interview Practice</h1>
 
-##  Overview
+
 MockMate AI is a full-stack AI-powered mock interview platform that simulates real technical interview workflows using structured question delivery and automated evaluation.
 It processes user responses through a **Groq LLM integration** to generate technical score, communication score, and detailed feedback including strengths, weaknesses, and improvement suggestions. All sessions and results are stored in MongoDB for performance tracking.
 The system uses **JWT authentication**, **bcrypt password hashing**, and **secure REST APIs built with Node.js, Express.js, and MongoDB**, with a **React.js frontend for the user interface**.
