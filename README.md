@@ -6,13 +6,12 @@ It processes user responses through a **Groq LLM integration** to generate techn
 
 The system uses **JWT authentication**, **bcrypt password hashing**, and **protected REST APIs built with Node.js**, **Express.js** and **MongoDB**, with a **React.js** frontend for the user interface.
 
-![React](https://img.shields.io/badge/Frontend-React-ff8c00)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-ff6b6b)
-![Express](https://img.shields.io/badge/API-Express-f4c430)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-f39c12)
-![AI](https://img.shields.io/badge/AI-Powered-e84393)
-![Status](https://img.shields.io/badge/Project-Active-f1c40f)
-
+!![React](https://img.shields.io/badge/Frontend-React-ff7a00)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-ff4f81)
+![Express](https://img.shields.io/badge/API-Express-ffd700)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-ff8c42)
+![AI](https://img.shields.io/badge/AI-Powered-fc3c8f)
+![Status](https://img.shields.io/badge/Project-Active-f7c948)
 ### API Documentation:
 - [API Documentation](https://github.com/barbiem29/MockMate-AI-Interview-Platform/blob/main/API.md)
 ### Architecture Documentation:
