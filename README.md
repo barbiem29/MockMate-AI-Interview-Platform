@@ -1,4 +1,4 @@
-<h1 align="center">MockMate AI – Automated Interview Practice & Evaluation Syst</h1>
+<h1 align="center">MockMate AI – Automated Interview Practice</h1>
 
 <p align="center">
 AI-powered mock interview system that simulates real technical interview workflows with automated evaluation and feedback.
@@ -12,7 +12,7 @@ AI-powered mock interview system that simulates real technical interview workflo
 <img src="https://img.shields.io/badge/Database-MongoDB-20c997?style=for-the-badge" />
 <img src="https://img.shields.io/badge/AI-Groq%20LLM-6f42c1?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Auth-JWT%20%26%20Bcrypt-ffc107?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-Active-198754?style=for-the-badge" />
+
 
 </p>
 
